@@ -1,0 +1,37 @@
+version: "3"
+services:
+  inviso_api:
+    container_name: inviso_api
+    build: .
+    ports:
+      - 6660:6660
+    environment:
+      INVISO_DB_CONN: 'postgresql+psycopg2://inviso_adm:1234password@inviso_db:5432/inviso_adm' # sqlalchemy connection string
+    depends_on:
+      - inviso_db
+
+  inviso_db:
+    image: postgres:14
+    container_name: inviso_db
+    volumes:
+      - inviso_postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: inviso_adm # default super user and database. https://hub.docker.com/_/postgres
+      POSTGRES_PASSWORD: 1234password
+    ports:
+      - 5432:5432 # for development, connect from docker host machine.
+
+  adminer: # optional, web based gui for browsing sql database
+    image: adminer:4.8.1
+    ports:
+      - 8081:8080
+    environment:
+      ADMINER_DEFAULT_SERVER: inviso_db
+
+  grafana:
+    image: grafana/grafana-oss:8.5.9
+    ports:
+      - 6661:3000 # for development, connect from docker host machine.
+
+volumes:
+  inviso_postgres:

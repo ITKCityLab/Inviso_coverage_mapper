@@ -1,0 +1,5 @@
+uvicorn==0.17.5
+starlette==0.17.1
+fastapi==0.74.1
+sqlalchemy==1.4.31
+psycopg2==2.9.3
