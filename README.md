@@ -39,27 +39,27 @@ The API is setup to accept data packages as JSON with the following structure (b
 {
   "adr": true, 
   "data": {
-        "latitudeDeg": 56.1622157,
-        "longitudeDeg": 10.2103446,
+        "latitudeDeg": 00.1622157,
+        "longitudeDeg": 00.2103446,
 		}
   "devEUI": "70b3d5705000bf80", 
   "rxInfo": [
     {
-      "name": "2125-LRW-01",
+      "name": "name-of-your-gateway",
       "rssi": -118,
       "time": "2022-02-14T19:58:05.227037Z",
       "loRaSNR": 4.2,
       "location": {
         "altitude": 49, 
-        "latitude": 56.237042,
-        "longitude": 10.230753 
+        "latitude": 00.237042,
+        "longitude": 00.230753 
       },
-      "gatewayID": "7276ff002e05070a"
+      "gatewayID": "1234567891234567"
     }
   ],
   "txInfo": {
     "dr": 5,
     "frequency": 867300000
   },
-  "deviceName": "os2iot-70b3d5705000bf80 - oyster", 
+  "deviceName": "name-device-providing-the-measurement", 
 }
