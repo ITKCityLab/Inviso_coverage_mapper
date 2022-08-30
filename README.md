@@ -36,13 +36,13 @@ Some components require environment variables before running:
 ## Data packages
 The API is setup to accept data packages as JSON with the following structure (below is an example package):
 
-{
+```{
   "adr": true, 
   "data": {
         "latitudeDeg": 00.1622157,
         "longitudeDeg": 00.2103446,
 		}
-  "devEUI": "70b3d5705000bf80", 
+  "devEUI": "1234567891234567", 
   "rxInfo": [
     {
       "name": "name-of-your-gateway",
