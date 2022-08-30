@@ -63,3 +63,4 @@ The API is setup to accept data packages as JSON with the following structure (b
   },
   "deviceName": "name-device-providing-the-measurement", 
 }
+```
