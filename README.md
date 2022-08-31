@@ -9,6 +9,8 @@ Your devices sends a data package with the signal information to the API as HTTP
 - IoT Sensor data persisted on PostgreSQL. The Database files are accessible in the docker volume.
 - Visualisation is done via [Grafana](https://grafana.com/).
 
+![Screenshot of interface](https://github.com/ITKCityLab/Inviso_coverage_mapper/blob/main/Screenshot.png "Screenshot of interface")
+
 ## Requirements
 Docker Engine, Docker-compose
 
