@@ -1,13 +1,13 @@
 
 # Inviso coverage mapper
-Inviso stores and visualize loraWAN signal quality.  
+Inviso stores and visualizes LoRaWan signal quality.  
 This code is delivered as a Docker container for easy deployment.
 
-Your devices send antenna data to the API as HTTP POST. SCORE stores the data in a SQL database and visualizes it in your browser.
+Your devices sends a data package with the signal information to the API as HTTP POST. Inviso stores the data in a SQL database and visualizes it in your browser via Grafana.
 
 API build with [FastAPI](https://fastapi.tiangolo.com/)  
 IoT Sensor data persisted on PostgreSQL. The Database files are accessible in the docker volume.
-
+Visualisation is done via [Grafana](https://grafana.com/).
 
 ## Requirements
 Docker Engine, Docker-compose
